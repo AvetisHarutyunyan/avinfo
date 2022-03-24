@@ -245,6 +245,32 @@ header {
 }
 
 /* =================== main ======================= */
+.toUpBtn {
+  position: fixed;
+  top: 120%;
+  right: 2%;
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.toUpBtn a {
+  font-size: 40px;
+  padding: 0px 20px;
+  color: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.toUpBtn a:hover {
+  color: #269d87;
+}
+.toUpBtn.show-toUpBtn {
+  position: fixed;
+  top: 85%;
+  opacity: 1;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
 .about__section {
   padding-top: 180px;
 }
