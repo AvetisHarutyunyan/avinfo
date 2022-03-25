@@ -252,6 +252,7 @@ header {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  z-index: 555;
 }
 .toUpBtn a {
   font-size: 40px;
