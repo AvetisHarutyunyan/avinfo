@@ -247,7 +247,7 @@ header {
   width: 100%;
 }
 
-/* =================== main ======================= */
+/* ======================== main ======================= */
 .toUpBtn {
   position: fixed;
   top: 120%;
@@ -255,7 +255,9 @@ header {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  z-index: 555;
 }
+
 .toUpBtn a {
   font-size: 40px;
   padding: 0px 20px;
