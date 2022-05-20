@@ -24,7 +24,7 @@ html {
 }
 
 .container {
-  max-width: 1204px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -142,10 +142,7 @@ header {
   top: 0;
   width: 100%;
   height: 100vh;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.788);
-  background-blend-mode: screen;
+  background-color: rgba(0, 0, 0, 0.975);
   padding: 136px 60px;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -216,6 +213,38 @@ header {
 .header__navbar .navside ul li a:hover::after {
   width: 100%;
 }
+.header__navbar .navside .nav_social__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+.header__navbar .navside .nav_social__links a {
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.header__navbar .navside .nav_social__links a:nth-child(1) {
+  margin-left: 0;
+}
+.header__navbar .navside .nav_social__links a:hover {
+  border: 1px solid #269d87;
+}
 
 .header__content {
   display: -webkit-box;
@@ -248,7 +277,7 @@ header {
   width: 100%;
 }
 
-/* ======================== main ======================= */
+/* =================== main ======================= */
 .toUpBtn {
   position: fixed;
   top: 120%;
@@ -258,23 +287,33 @@ header {
   transition: 0.2s ease;
   z-index: 555;
 }
-
 .toUpBtn a {
   font-size: 40px;
-  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(38, 157, 135, 0.685);
   color: white;
+  border-radius: 50%;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .toUpBtn a:hover {
-  color: #269d87;
+  background-color: #269d87;
+  color: #241d32;
 }
 .toUpBtn.show-toUpBtn {
   position: fixed;
   top: 85%;
   opacity: 1;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
 }
 
 .about__section {
@@ -381,6 +420,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-top: 36px;
+  padding-right: 5px;
 }
 .project__items .project__item {
   position: relative;

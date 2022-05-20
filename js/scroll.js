@@ -3,5 +3,5 @@ window.addEventListener("scroll", () => {
     topNav.classList.toggle("active-navbar", scrollY > 100);
 
     const toUpBtn = document.querySelector(".toUpBtn");
-    toUpBtn.classList.toggle("show-toUpBtn", scrollY > 0);
+    toUpBtn.classList.toggle("show-toUpBtn", scrollY > 800);
 });
