@@ -7,7 +7,7 @@ function sectionActive() {
             navLists.querySelector(".link-active").classList.remove("link-active");
 
             item.classList.add("link-active");
-        });  
+        });
     });
 }
 sectionActive();
@@ -25,9 +25,23 @@ function navside() {
     });
 
     document.addEventListener("mouseup", (e) => {
-        if(e.target !== closeBtn && e.target !== nav) {
+        if (e.target !== closeBtn && e.target !== nav) {
             nav.classList.remove("nav-active");
         }
     });
 }
 navside();
+
+new Swiper(".project__items", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        }
+    }
+});
