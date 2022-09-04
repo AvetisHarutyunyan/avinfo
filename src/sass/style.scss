@@ -426,8 +426,7 @@ header {
             transform: translate(-50%, -50%);
             transition: 0.2s ease;
 
-            button {
-                cursor: pointer;
+            .viewBtn {
                 padding: 18px 38px;
                 font-size: 18px;
                 font-weight: 500;
@@ -446,6 +445,7 @@ header {
         }
 
         &:hover {
+
             img {
                 transform: scale(1.1);
                 filter: brightness(60%);
@@ -544,7 +544,7 @@ header {
     text-align: center;
     margin-top: 40px;
 
-    p {
+    a {
         color: rgba(255, 255, 255, 0.5);
         max-width: 210px;
         margin: 0 auto;
