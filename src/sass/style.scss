@@ -34,6 +34,12 @@ html {
 body {
     background-color: $violet;
     color: rgb(255, 255, 255);
+    transition: 2.5s ease;
+    opacity: 0;
+
+    &.bodyShow {
+        opacity: 1;
+    }
 
     &::-webkit-scrollbar {
         background-color: rgb(75, 75, 75);
@@ -263,7 +269,8 @@ header {
         .name {
             font-size: 40px;
             font-weight: 700;
-            margin: 8px 37px;
+            margin: 8px 0px 8px 37px;
+            text-align: center;
         }
     }
 
@@ -322,6 +329,7 @@ header {
     align-items: center;
     gap: 0 20px;
     transition: .3s ease;
+    z-index: 200;
 
     &:hover {
         width: 90px;
@@ -547,6 +555,24 @@ header {
             .view_btn {
                 top: 50%;
             }
+
+            .project_name {
+                left: 50%;
+                transition: .6s ease;
+                transition-delay: .2s;
+            }
+        }
+
+        .project_name {
+            position: absolute;
+            top: 25%;
+            left: -50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-shadow: 0 3px 2px black;
+            text-align: center;
         }
     }
 
@@ -602,7 +628,7 @@ header {
                     transition: 0.2s ease;
 
                     &:hover {
-                        color: rgb(255, 255, 255);
+                        color: $mainGreen;
                     }
                 }
             }
@@ -622,11 +648,6 @@ header {
             li {
                 margin: 15px 0;
                 color: rgba(255, 255, 255, 0.5);
-                transition: 0.2s ease;
-
-                &:hover {
-                    color: rgb(255, 255, 255);
-                }
             }
         }
     }
@@ -643,7 +664,7 @@ header {
         transition: 0.2s ease;
 
         &:hover {
-            color: rgb(255, 255, 255);
+            color: $mainGreen;
         }
     }
 }

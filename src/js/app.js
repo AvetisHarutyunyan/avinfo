@@ -1,3 +1,5 @@
+"use strict";
+
 function sectionActive() {
     const navLists = document.querySelector("#nav_list");
     const navLinks = document.querySelectorAll("#nav_link");
@@ -31,36 +33,3 @@ function navside() {
     });
 }
 navside();
-
-new Swiper(".project__items", {
-    spaceBetween: 20,
-    slidesPerView: 1,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2
-        }
-    }
-});
-
-function playStopBtn() {
-    const playStopToggle = document.querySelector(".play_and_stop__btn");
-    const playStopText = document.querySelector(".play_and_stop__text");
-    const music = document.querySelector(".music_mp3");
-
-    playStopToggle.addEventListener("click", () => {
-        if (!playStopToggle.classList.contains("songStop")) {
-            playStopToggle.classList.add("songStop");
-            playStopText.textContent = "Play";
-            music.pause();
-        } else {
-            playStopToggle.classList.remove("songStop");
-            playStopText.textContent = "Stop";
-            music.play();
-        }
-    });
-}
-playStopBtn();
