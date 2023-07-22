@@ -6,14 +6,14 @@ function playStopBtn() {
     const music = document.querySelector(".music_mp3");
 
     playStopToggle.addEventListener("click", () => {
-        if (!playStopToggle.classList.contains("songStop")) {
-            playStopToggle.classList.add("songStop");
-            playStopText.textContent = "Play";
-            music.pause();
-        } else {
-            playStopToggle.classList.remove("songStop");
+        if (!playStopToggle.classList.contains("songPlay")) {
+            playStopToggle.classList.add("songPlay");
             playStopText.textContent = "Stop";
             music.play();
+        } else {
+            playStopToggle.classList.remove("songPlay");
+            playStopText.textContent = "Play";
+            music.pause();
         }
     });
 }

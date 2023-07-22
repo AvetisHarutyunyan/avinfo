@@ -322,81 +322,138 @@ header {
     top: 40%;
     right: -5px;
     background-color: $mainGreen;
-    width: 40px;
+    width: 35px;
     border-radius: 10px 0 0 10px;
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
     align-items: center;
     gap: 0 20px;
     transition: .3s ease;
     z-index: 200;
 
+    .music_note_icon {
+        position: absolute;
+        top: -23%;
+        left: 35%;
+        transform: translate(-50%, -50%) rotate(5deg);
+        
+
+        .music_icon {
+            width: 30px;
+            animation: autoAnime alternate .9s infinite;
+            
+            @keyframes autoAnime {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     &:hover {
-        width: 90px;
+        width: 75px;
         gap: 0;
+
+        .music_note_icon {
+            position: absolute;
+            top: -17px;
+            left: 56%;
+
+            .music_icon {
+                width: 45px;
+            }
+        }
     }
 
     .play_and_stop__btn {
+        position: relative;
         cursor: pointer;
         display: flex;
         padding: 10px;
         gap: 0 5px;
 
         .play__line1 {
+            position: absolute;
+            top: 50%;
+            left: 14%;
+            transform: translate(-50%, -50%);
             width: 3px;
-            height: 18px;
+            height: 22px;
             background-color: #fff;
+            transform: translate(-50%, -50%);
             transition: .2s;
             border-radius: 5px;
         }
 
         .play__line2 {
+            position: absolute;
+            top: 30%;
+            left: 29%;
             width: 3px;
-            height: 18px;
+            height: 17px;
             background-color: #fff;
+            transform: rotate(-45deg) translate(-50%, -50%);
             transition: .2s;
             border-radius: 5px;
         }
 
         .play__line3 {
+            position: absolute;
+            top: 60%;
+            left: 12%;
             width: 3px;
-            height: 19px;
+            height: 16px;
             background-color: #fff;
-            border-radius: 5px;
+            transform: rotate(50deg) translate(-50%, -50%);
             transition: .2s;
-            opacity: 0;
+            border-radius: 5px;
+            opacity: 1;
         }
 
         .play_and_stop__text {
             font-size: 15px;
             font-weight: 600;
+            margin-left: 20px;
         }
 
-        &.songStop {
+        // click for play
+        &.songPlay {
 
             .play__line1 {
+                position: absolute;
+                top: 50%;
+                left: 24%;
+                transform: translate(-50%, -50%);
                 width: 3px;
-                height: 22px;
+                height: 18px;
                 background-color: #fff;
-                transform: translate(0, 0);
+                transition: .2s;
                 border-radius: 5px;
             }
 
             .play__line2 {
+                position: absolute;
+                top: 50%;
+                left: 13%;
+                transform: translate(-50%, -50%);
                 width: 3px;
-                height: 17px;
+                height: 18px;
                 background-color: #fff;
-                transform: rotate(-45deg) translate(0px, -3px);
+                transition: .2s;
                 border-radius: 5px;
             }
 
             .play__line3 {
+                position: absolute;
                 width: 3px;
-                height: 16px;
+                height: 18px;
                 background-color: #fff;
-                transform: rotate(50deg) translate(0, 13px);
                 border-radius: 5px;
-                opacity: 1;
+                transition: .2s;
+                opacity: 0;
             }
         }
     }
