@@ -33,3 +33,6 @@ function navside() {
     });
 }
 navside();
+
+const years = document.querySelector(".year");
+years.textContent = new Date().getFullYear();

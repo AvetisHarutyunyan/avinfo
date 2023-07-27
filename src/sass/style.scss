@@ -377,7 +377,7 @@ header {
 
         .play__line1 {
             position: absolute;
-            top: 50%;
+            top: 50.5%;
             left: 14%;
             transform: translate(-50%, -50%);
             width: 3px;
@@ -713,6 +713,11 @@ header {
 .create {
     text-align: center;
     margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    .name {
+        margin-top: 40px;
+    }
 
     a {
         color: rgba(255, 255, 255, 0.5);
@@ -723,6 +728,11 @@ header {
         &:hover {
             color: $mainGreen;
         }
+    }
+
+    .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 10px;
     }
 }
 
